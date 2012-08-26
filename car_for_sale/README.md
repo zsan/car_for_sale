@@ -139,8 +139,8 @@ Schema
   |
   |
   |     Table "public.queries"
-  |		  Column     |            Type             |                      Modifiers                       
-  |	    ------------+-----------------------------+------------------------------------------------------
+  |     Column     |            Type             |                      Modifiers                       
+  |	    -----------+-----------------------------+------------------------------------------------------
   |	--- id         | integer                     | not null default nextval('queries_id_seq'::regclass)
   --|->	cat        | character varying(70)       | 
     |   date       | character varying(50)       | 
@@ -154,8 +154,8 @@ Schema
     |
     |
     |   Table "public.results"
-    |	  Column     |            Type             |                      Modifiers                       
-    |   ------------+-----------------------------+------------------------------------------------------
+    |   Column     |            Type             |                      Modifiers                       
+    |   -----------+-----------------------------+------------------------------------------------------
     |   id         | integer                     | not null default nextval('results_id_seq'::regclass)
     --> query_id   | integer                     | 
         ranking    | integer                     | not null
