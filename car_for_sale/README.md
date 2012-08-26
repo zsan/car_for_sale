@@ -143,7 +143,7 @@ Schema
   |	    ------------+-----------------------------+------------------------------------------------------
   |	--- id         | integer                     | not null default nextval('queries_id_seq'::regclass)
   --|->	cat        | character varying(70)       | 
-    |	  date       | character varying(50)       | 
+    |   date       | character varying(50)       | 
     |   geo        | character varying(20)       | not null
     |   cmpt       | character varying(10)       | not null
     |   content    | character varying(5)        | not null
@@ -159,10 +159,10 @@ Schema
     |   id         | integer                     | not null default nextval('results_id_seq'::regclass)
     --> query_id   | integer                     | 
         ranking    | integer                     | not null
-		    result     | text                        | not null
-		    percentage | character varying(50)       | 
-		    created_at | timestamp without time zone | 
-		    updated_at | timestamp without time zone |
+        result     | text                        | not null
+        percentage | character varying(50)       | 
+        created_at | timestamp without time zone | 
+        updated_at | timestamp without time zone |
 </pre>
 
 Examples
