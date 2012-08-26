@@ -168,6 +168,7 @@ Schema
 Examples
 --------
 
+Categories
 <table>
 	<tr>
 		<td>id</td>
@@ -189,6 +190,7 @@ Examples
 	</tr>
 </table>
 
+Queries
 <table>
 	<tr>
 		<td>id</td>
@@ -225,6 +227,7 @@ Examples
 	</tr>
 </table>
 
+Results
 <table>
 	<tr>
 		<td>id</td>
