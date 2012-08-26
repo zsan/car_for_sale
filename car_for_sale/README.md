@@ -122,3 +122,137 @@ Soon
   </tr>
 </table>
 
+DB TABLES & RELATIONSHIPS
+=========================
+
+Schema
+------
+
+<pre>
+		  Table "public.categories"
+		 	Column     |            Type             | Modifiers 
+		  ------------+-----------------------------+-----------
+  --- id         | character varying(70)       | not null
+	|	  name       | text                        | not null
+	|	  created_at | timestamp without time zone | 
+	|	  updated_at | timestamp without time zone |
+  |
+  |
+	|	    Table "public.queries"
+	|		  Column     |            Type             |                      Modifiers                       
+	|	    ------------+-----------------------------+------------------------------------------------------
+	|	--- id         | integer                     | not null default nextval('queries_id_seq'::regclass)
+	--|->	cat        | character varying(70)       | 
+  	|	  date       | character varying(50)       | 
+		|   geo        | character varying(20)       | not null
+		|   cmpt       | character varying(10)       | not null
+		|   content    | character varying(5)        | not null
+		|   created_at | timestamp without time zone | 
+		|   updated_at | timestamp without time zone | 
+		|   hl         | character varying(10)       | 
+    |
+    |
+    |
+		|   Table "public.results"
+		|	  Column     |            Type             |                      Modifiers                       
+		|   ------------+-----------------------------+------------------------------------------------------
+		|   id         | integer                     | not null default nextval('results_id_seq'::regclass)
+		--> query_id   | integer                     | 
+		    ranking    | integer                     | not null
+		    result     | text                        | not null
+		    percentage | character varying(50)       | 
+		    created_at | timestamp without time zone | 
+		    updated_at | timestamp without time zone |
+</pre>
+
+Examples
+--------
+
+<table>
+	<tr>
+		<td>id</td>
+		<td>name</td>
+		<td>created_at</td>
+		<td>updated_at</td>
+	</tr>
+	<tr>
+		<td>0-3</td>
+		<td>Arts & Entertainment</td>
+		<td>2012-08-26 01:27:49.126124</td>
+		<td>2012-08-26 01:27:49.126124</td>
+	</tr>
+	<tr>
+		<td>0-3-184</td>
+		<td>Celebrities & Entertainment News</td>
+		<td>2012-08-26 01:27:49.185775</td>
+		<td>2012-08-26 01:27:49.185775</td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+		<td>id</td>
+		<td>cat</td>
+		<td>date</td>
+		<td>geo</td>
+		<td>cmpt</td>
+		<td>content</td>
+		<td>created_at</td>
+		<td>updated_at</td>
+		<td>hl</td>
+	</tr>
+	<tr>
+		<td>22822</td>
+		<td>0-3</td>
+		<td>8/2012 1m</td>
+		<td>US</td>
+		<td>q</td>
+		<td>1</td>
+		<td>2012-08-26 01:50:39.017567</td>
+		<td>2012-08-26 01:50:39.017567</td>
+		<td>en</td>
+	</tr>
+	<tr>
+		<td>24619</td>
+		<td>0-3</td>
+		<td>8/2012 1m</td>
+		<td>US</td>
+		<td>q</td>
+		<td>1</td>]
+		<td>2012-08-27 00:10:10.759103</td>
+		<td>2012-08-27 00:10:10.759103</td>
+		<td>en</td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+		<td>id</td>
+		<td>query_id</td>
+		<td>ranking</td>
+		<td>result</td>
+		<td>percentage</td>
+		<td>created_at</td>
+		<td>updated_at</td>
+	</tr>
+	<tr>
+		<td>38308</td>
+		<td>22822</td>
+		<td>1</td>
+		<td>miley cyrus haircut</td>
+		<td>Breakout</td>
+		<td>2012-08-26 01:50:39.122775</td>
+		<td>2012-08-26 01:50:39.122775</td>
+	</tr>
+	<tr>
+		<td>38309</td>
+		<td>22822</td>
+		<td>2</td>
+		<td>tony scott</td>
+		<td>Breakout</td>
+		<td>2012-08-26 01:50:39.155391</td>
+		<td>2012-08-26 01:50:39.155391</td>
+	</tr>
+</table>
+
+
