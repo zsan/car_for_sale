@@ -133,13 +133,13 @@ Schema
       Column     |            Type             | Modifiers 
       ------------+-----------------------------+-----------
   --- id         | character varying(70)       | not null
-	|	  name       | text                        | not null
-	|	  created_at | timestamp without time zone | 
-	|	  updated_at | timestamp without time zone |
+  |	  name       | text                        | not null
+  |	  created_at | timestamp without time zone | 
+  |	  updated_at | timestamp without time zone |
   |
   |
-	|	    Table "public.queries"
-	|		  Column     |            Type             |                      Modifiers                       
+  |     Table "public.queries"
+  |		  Column     |            Type             |                      Modifiers                       
 	|	    ------------+-----------------------------+------------------------------------------------------
 	|	--- id         | integer                     | not null default nextval('queries_id_seq'::regclass)
 	--|->	cat        | character varying(70)       | 
