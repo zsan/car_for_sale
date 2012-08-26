@@ -129,9 +129,9 @@ Schema
 ------
 
 <pre>
-		  Table "public.categories"
-		 	Column     |            Type             | Modifiers 
-		  ------------+-----------------------------+-----------
+      Table "public.categories"
+      Column     |            Type             | Modifiers 
+      ------------+-----------------------------+-----------
   --- id         | character varying(70)       | not null
 	|	  name       | text                        | not null
 	|	  created_at | timestamp without time zone | 
